@@ -58,7 +58,15 @@ body {
 	font-size: 6rem;
 }
 
-
+.btn-pink {
+	font-weight: bolder;
+	font-size: 1.4rem;
+	background-color: #FD87A7;
+	color: white;
+	border-radius: 1rem;
+	padding-left: 30px;
+	padding-right: 30px;
+}
 
 
 
