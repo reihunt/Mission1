@@ -16,29 +16,30 @@ if(isset($_POST['dangnhap'])){
 	}
 
 
-//authentication
-$sql = "SELECT * FROM users WHERE email = '$email'";
+	//authentication
+	$sql = "SELECT * FROM users WHERE email = '$email'";
 
-//thực thi truy vấn
-$result = mysqli_query($conn, $sql);
+	//thực thi truy vấn
+	$result = mysqli_query($conn, $sql);
 
 
-//check có tồn tại không
-if (mysqli_num_rows($result) == 0){
-	echo 'K tồn tại';
-}
-else {
-	$row = mysqli_fetch_assoc($result);
-	$db_password = $row['password'];
-
-	if($password == $db_password){
-		$_SESSION['email'] = $email;
-		echo '<script>alert("Đăng nhập thành công");
-			window.location="index.php"; </script>';
-	}else{
-		echo "<script>alert('WRONG USERNAME or PASSWORD!!!')</script>";
+	//check có tồn tại không
+	if (mysqli_num_rows($result) == 0){
+		echo 'K tồn tại';
 	}
-	
-}
+	else {
+		$row = mysqli_fetch_assoc($result);
+		$db_password = $row['password'];
+		$check_password = password_verify($password, $db_password);
+
+		if($check_password === true){
+			$_SESSION['email'] = $email;
+			echo '<script>alert("Đăng nhập thành công");
+			window.location="index.php"; </script>';
+		}else{
+			echo "<script>alert('WRONG USERNAME or PASSWORD!!!')</script>";
+		}
+
+	}
 }
 ?>
