@@ -26,24 +26,26 @@
 						<div class="card m-3" style="border-radius: 50px;">
 							<div class="card-body p-5">
 								<h2 class="text-center mb-5" style="font-weight: bolder">Create An Account</h2>
-								<form>
+								<form method="post" action="signup.php" class="form">
 									<div class="form-outline mb-4">
-										<input type="text" id="form3Example1cg" class="form-control form-control-lg" placeholder="Your Name"/>
+										<input type="text" name="username" id="form3Example1cg" class="form-control form-control-lg" placeholder="Your Name">
 									</div>
 									<div class="form-outline mb-4">
-										<input type="email" id="form3Example3cg" class="form-control form-control-lg" placeholder="Email Address"/>
+										<input type="email" name="email" id="form3Example3cg" class="form-control form-control-lg" placeholder="Email Address"/>
 									</div>
 									<div class="form-outline mb-4">
-										<input type="password" id="form3Example4cg" class="form-control form-control-lg" placeholder="Password"/>
+										<input type="password" name="password" id="form3Example4cg" class="form-control form-control-lg" placeholder="Password"/>
 									</div>
 									<div class="form-outline mb-4">
-										<input type="password" id="form3Example4cdg" class="form-control form-control-lg" placeholder="Repeat Password"/>
+										<input type="password" name="password_repeat" id="form3Example4cdg" class="form-control form-control-lg" placeholder="Repeat Password"/>
 									</div>
 									<div class="d-flex justify-content-center">
-										<button type="button" class="btn btn-pink">Create Account</button>
+										<button type="submit" name="dangky" class="btn btn-pink">Create Account</button>
+										<?php require 'xuly.php';?>
 									</div>
 									<p class="text-center text-muted mt-4 mb-0">Already have an account? <a href="/login.php" class="fw-bold text-body"><u>Login</u></a></p>
 								</form>
+								
 
 							</div>
 						</div>

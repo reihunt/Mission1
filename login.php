@@ -18,6 +18,7 @@
 		<!-- End navbar -->
 
 		<!-- Start sign up form -->
+		<form method="post" name ="dangnhap" action="login.php" class="form">
 		<div class="container h-100 d-flex justify-content-center align-items-center">
 			<!-- your form container -->
 			<div class="container h-100">
@@ -29,13 +30,13 @@
 								<p class="text-center text-muted mt-2 mb-5">Sign in to your account</p>
 								<form>
 									<div class="form-outline mb-4 mt-3">
-										<input type="email" id="form3Example3cg" class="form-control form-control-lg" placeholder="Email Address"/>
+										<input type="email" name="email" id="form3Example3cg" class="form-control form-control-lg" placeholder="Email Address"/>
 									</div>
 									<div class="form-outline mb-4">
-										<input type="password" id="form3Example4cg" class="form-control form-control-lg" placeholder="Password"/>
+										<input type="password" name="password" id="form3Example4cg" class="form-control form-control-lg" placeholder="Password"/>
 									</div>
 									<div class="d-flex justify-content-center">
-										<button type="button" class="btn btn-pink">Login</button>
+										<button type="submit" name="dangnhap" class="btn btn-pink">Login</button>
 									</div>
 									<p class="text-center text-muted mt-4 mb-0">Don't have an account? <a href="/signup.php" class="fw-bold text-body"><u>Sign up</u></a></p>
 								</form>
@@ -46,6 +47,8 @@
 				</div>
 			</div>
 		</div>
+	<?php require 'xulylogin.php';?>
+	</form>
 
 		<!-- End sign up form -->
 
