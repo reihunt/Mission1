@@ -45,13 +45,13 @@ if(isset($_POST['dangky'])){
 	else {
 		$hashed_password = password_hash($password, PASSWORD_DEFAULT);
 		$sql = "INSERT INTO users (name, email, password) VALUES ('$username','$email','$hashed_password')";
+		$sql2 = "INSERT INTO profile (id) VALUES (NULL)";
 		echo '<script language="javascript">alert("Đăng ký thành công!"); window.location="login.php";</script>';
 
-		if (mysqli_query($conn, $sql)){
+		if (mysqli_query($conn, $sql) and mysqli_query($conn, $sql2)){
 			echo "Tên đăng nhập: ".$_POST['username']."<br/>";
 			echo "Mật khẩu: " .$_POST['password']."<br/>";
 			echo "Email đăng nhập: ".$_POST['email']."<br/>";
-
 		}
 		else {
 			echo '<script language="javascript">alert("Có lỗi trong quá trình xử lý"); window.location="login.php";</script>';

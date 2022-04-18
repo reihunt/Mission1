@@ -53,10 +53,22 @@ body {
 	margin-top: 8rem;
 }
 
-#motiv > h1{
+#motiv h1{
 	font-weight: bold;
 	font-size: 6rem;
 }
+
+#members {
+	margin-top: 1rem;
+	margin-left: 4rem;
+}
+
+#members h1{
+	font-weight: bolder;
+	font-size: 3.3rem;
+	color: #FF7A00;
+}
+
 
 .btn-pink {
 	font-weight: bolder;

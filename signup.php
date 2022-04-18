@@ -14,7 +14,7 @@
 
 	<body>
 		<!-- Start navbar -->
-		<?php include "templates/navbar.html" ?>	
+		<?php include "templates/navbar.php" ?>	
 		<!-- End navbar -->
 
 		<!-- Start sign up form -->

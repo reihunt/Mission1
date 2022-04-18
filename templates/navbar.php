@@ -25,16 +25,30 @@
 				<li class="nav-item mx-3">
 					<a class="nav-link" href="/about.php">About us</a>
 				</li>
-				<li class="nav-item dropdown mx-3">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-						User
-					</a>
-					<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-						<li><a class="dropdown-item" href="/create_profile.php">Create Profile</a></li>
-						<li><hr class="dropdown-divider"></li>
-						<li><a class="dropdown-item" href="">Sign out</a></li>
-					</ul>
-				</li>
+				
+				<?php 
+				session_start();
+				
+				if($_SESSION['email'] == NULL) {
+					echo '<li class="nav-item mx-3">
+							<a class="nav-link btn btn-light" id="signup_button" href="/signup.php">Sign up</a>
+						  </li>
+						  <li class="nav-item mx-3">
+							<a class="nav-link btn btn-dark" id="login_button" href="/login.php">Login</a>
+				          </li>';
+				} else {
+					echo '<li class="nav-item dropdown mx-3">
+						  	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								User
+							</a>
+							<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+								<li><a class="dropdown-item" href="/create_profile.php">Create Profile</a></li>
+								<li><hr class="dropdown-divider"></li>
+								<li><a class="dropdown-item" href="/logout.php">Sign out</a></li>
+							</ul>
+						  </li>';
+				}
+				?>
 			</ul>
 		</div>
 	</div>

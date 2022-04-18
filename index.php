@@ -16,7 +16,7 @@
 		<!-- Start navbar -->
 		<!-- Include navbar.html when not logged in -->
 		<!-- Include navbar_loggedin.html when logged in -->
-		<?php include "templates/navbar_loggedin.html" ?>	
+		<?php include "templates/navbar.php" ?>	
 		<!-- End navbar -->
 		<div class="container" id="motiv">
 			<h1>WHO ARE WE?</h1>
