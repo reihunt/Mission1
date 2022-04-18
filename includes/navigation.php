@@ -17,10 +17,10 @@
                         if(!isset($_SESSION['user_name'])){
                             ?>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="../pages/login.php">Login</a>
+                                    <a class="nav-link" href="../xuly.php">Login</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="../pages/register.php">Register</a>
+                                    <a class="nav-link" href="../signup.php">Register</a>
                                 </li>
                             <?php
                         }else{
